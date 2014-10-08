@@ -1,0 +1,96 @@
+/* CSS declarations go here */
+*, *:before, *:after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border-width: 0;	
+}
+body>section{
+	background: #FFFFFF url(/img/GPbg.png) right bottom no-repeat;
+}
+
+#header{
+	position: fixed;
+	z-index: 100;
+	top:0;
+	left:0;
+	width: 100%;
+	height:100px;
+	padding:0 38px;
+	background: rgba(161,167,81,1);
+	transition: all 0.2s ease-in-out;
+}
+#header:after {
+	content: ".";
+	text-indent: -50px;
+	overflow: hidden;
+	height: 40px;
+	width: 100%;
+	display: block;
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	background: transparent url(/img/barbed-wire.png) 0 0 repeat-x;
+}
+
+#header.floating{
+	height:50px;
+	background: rgba(161,167,81,0.9);
+}
+
+#header #logo{
+	display: inline-block;
+	width:177px;
+	text-align: center;
+	padding:15px 0;
+	position: relative;
+	z-index: 101;
+	transition: all 0.2s ease-in-out;
+}
+#header.floating #logo{
+	padding:6px 0; 
+}
+#header #logo img{
+	width:177px;
+	height:auto;
+	transition: all 0.2s ease-in-out;
+}
+#header.floating #logo img{
+	width:133px;	
+}
+
+#header nav{
+	float: right;
+}
+#header nav #login-buttons{
+	height: 80px;
+	max-width: 200px;
+	min-width: 80px;
+	font:19px/25px 'Droid Serif', Georgia, Times, serif;
+	color: #464646;
+	padding:15px 0;
+	transition: all 0.2s ease-in-out;
+}
+#header.floating nav #login-buttons{
+	padding:6px 0;
+}
+#header nav .login-link-text{
+	text-decoration: none;
+	color: #464646;
+}
+#header nav #login-dropdown-list{
+}
+#login-buttons .login-button, .accounts-dialog .login-button {
+	background: rgba(161,167,81,1);
+	border: 1px solid #464646;
+	transition: all 0.2s ease-in-out;
+}
+#login-buttons .login-button:hover, .accounts-dialog .login-button:hover{
+	background:rgba(182,189,97,1); 	
+}
+#header nav #login-name-link{
+	display: block;
+	max-width: 100%;
+	white-space: nowrap;
+	text-overflow:ellipsis; 
+}
